@@ -18,7 +18,7 @@ public class PrincipalComBusca {
         Scanner leitura = new Scanner(System.in);
         System.out.println("Digite o nome do filme para busca: ");
         var busca = leitura.nextLine();
-        String chave = "ee12ec99";
+        String chave = "***********";
         String endereco = "https://www.omdbapi.com/?t="+busca+"&apikey="+chave;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(endereco)).build();
@@ -27,7 +27,7 @@ public class PrincipalComBusca {
 
         String json = response.body();
         System.out.println(json);
-
+  
         Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
         //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
         TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
