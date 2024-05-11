@@ -33,7 +33,7 @@ public class PrincipalComBusca {
             System.out.println("Digite o nome do filme para busca: ");
             busca = leitura.nextLine();
             String chave = apiKey.getApiKey();
-            System.out.println(chave);
+
 
             if (busca.equalsIgnoreCase("Sair")) {
                 break;
